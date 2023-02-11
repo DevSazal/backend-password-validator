@@ -1,0 +1,46 @@
+swagger: '2.0'
+info:
+  description: Compromised password API for erasys back-end trial task
+  version: 1.0.0
+  title: Compromised password API
+  contact:
+    email: thomas.bretzk@erasys.de
+
+paths:
+  /compromised:
+    get:
+      summary: Checks if a password is compromised or not
+      description: Checks if a password is compromised or not
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      parameters:
+      - in: query
+        name: password
+        type: string
+        required: true
+        description: The password to check
+      responses:
+        200:
+          description: The password is compromised!
+          schema:
+            $ref: '#/definitions/Message'
+        204:
+          description: No content, the password is not compromised.
+        400:
+          description: Invalid input
+          schema:
+            $ref: '#/definitions/Message'
+definitions:
+  Message:
+    type: object
+    required:
+    - errors
+    properties:
+      message:
+        type: string
+host: localhost:5000
+basePath: /
+schemes:
+ - http

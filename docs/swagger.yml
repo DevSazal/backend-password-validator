@@ -1,0 +1,51 @@
+swagger: '2.0'
+info:
+  description: Password checker API for erasys back-end trial task
+  version: 1.0.0
+  title: Password check API
+  contact:
+    email: thomas.bretzk@erasys.de
+
+paths:
+  /passwords:
+    post:
+      summary: checks a password
+      description: Checks a password
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      parameters:
+      - in: body
+        name: passwordItem
+        description: Password item to be checked
+        schema:
+          $ref: '#/definitions/PasswordItem'
+      responses:
+        204:
+          description: no content
+        400:
+          description: invalid input
+          schema:
+            $ref: '#/definitions/PasswordErrors'
+definitions:
+  PasswordItem:
+    type: object
+    required:
+    - password
+    properties:
+      password:
+        type: string
+  PasswordErrors:
+    type: object
+    required:
+    - errors
+    properties:
+      errors:
+        type: array
+        items:
+          type: string
+host: localhost:3000
+basePath: /
+schemes:
+ - http
