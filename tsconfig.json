@@ -4,6 +4,7 @@
     "noImplicitAny": true,
     "module": "commonjs",
     "esModuleInterop": true,
+    "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
     "target": "ES2018",
     "moduleResolution": "node",

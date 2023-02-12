@@ -1,0 +1,23 @@
+{
+  "rules": [
+    {
+      "rule": "^.{0,4}$",
+      "message": "Your password must be at least 5 characters."
+    },
+
+    {
+      "rule": "!?(([a-zA-Z]).*?\\2{2,})",
+      "message": "Your password contains more than two repeating consecutive characters, which is not allowed."
+    },
+
+    {
+      "rule": "^([^A-Z!@#$%^&*_]*)$",
+      "message": "Your password must contain at least one upper-case character OR one special character."
+    },
+
+    {
+      "rule": "^([^0-9]*)$",
+      "message": "Your password must contain at least one digit."
+    }
+  ]
+}
