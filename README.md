@@ -6,7 +6,7 @@
 * NPM
 * TypeScript
 * Git
-* Docker - ([docker image](https://hub.docker.com/r/sazal/typescript-password-validator) optional.
+* Docker - [Install Docker community edition](https://hub.docker.com/search/?type=edition&offering=community) optional.
 
 #### 🎁 If you are a fan of docker, then pull the [docker image](https://hub.docker.com/r/sazal/typescript-password-validator) by following the commands:
 
