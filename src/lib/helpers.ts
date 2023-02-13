@@ -7,7 +7,10 @@ import { RuleType } from './../types';
  * @param {RuleType} rules
  * @return {Object} errors - array object value
  */
-export const validator = async (password: string, rules: RuleType): Promise<{ errors: string[] }> => {
+export const validator = async (
+  password: string,
+  rules: RuleType,
+): Promise<{ errors: string[] }> => {
   const errors: string[] = [];
 
   rules.forEach((index: { rule: string; message: string }) => {

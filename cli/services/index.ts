@@ -4,7 +4,7 @@ import request from 'supertest';
 
 export const passwordPolicyTester = async (password: string) => {
   const response = await request(app)
-    .post('/api/v1/passwords')
+    .post('/passwords')
     .set('Content-Type', 'application/json')
     .send({ password });
 

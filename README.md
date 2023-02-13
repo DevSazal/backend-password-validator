@@ -2,7 +2,7 @@
 
 ### Requirements:
 
-* Node.js
+* Node.js (14.x)
 * NPM
 * TypeScript
 * Git
@@ -20,7 +20,7 @@ The application includes the following files and folders.
 
 Let's move to the cloned directory with your terminal.
 
-To install, build, and start the application for the first time, run the following commands in your shell using `makefile`:
+To install, build, and start the application for the first time, run the following commands in your shell using `makefile` (only for macOS and Linux):
 
 ```bash
 make install
@@ -74,8 +74,10 @@ To learn more, you can use the following commands: 
 make help
 ```
 
-At the same time, you can use the default `npm` commands like:
+#### At the same time, you can use the default `npm` commands like:
 ```bash
+npm i
+npm run build
 npm run start
 npm run cli
 ```
