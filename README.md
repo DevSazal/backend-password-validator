@@ -6,6 +6,14 @@
 * NPM
 * TypeScript
 * Git
+* Docker - ([docker image](https://hub.docker.com/r/sazal/typescript-password-validator) optional.
+
+#### 🎁 If you are a fan of docker, then pull the [docker image](https://hub.docker.com/r/sazal/typescript-password-validator) by following the commands:
+
+```bash
+docker pull sazal/typescript-password-validator
+```
+
 
 Let's clone the repository on your machine.
 
