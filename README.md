@@ -21,6 +21,7 @@ The application includes the following files and folders.
 
 - `src` - Code for the application written in TypeScript, Express.js.
 - `cli` - Node cli script which can be performed from terminal.
+- `__tests__` - to test all the features.
 - `.env.example` - A sample of .env which can be helpful for configuration.
 
 
@@ -57,6 +58,12 @@ make build
 ### Run:
 ```bash
 make start
+```
+
+### Test:
+```bash
+make test
+make test-unit
 ```
 
 
