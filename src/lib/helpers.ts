@@ -13,11 +13,15 @@ export const validator = async (
 ): Promise<{ errors: string[] }> => {
   const errors: string[] = [];
 
-  rules.forEach((index: { rule: string; message: string }) => {
-    if (password.match(new RegExp(index.rule, 'g'))) {
-      errors.push(index.message);
-    }
-  });
+  try {
+    rules.forEach((index: { rule: string; message: string }) => {
+      if (password.match(new RegExp(index.rule, 'g'))) {
+        errors.push(index.message);
+      }
+    });
+  } catch (error) {
+    errors.push('No password found!');
+  }
 
   return { errors };
 };
